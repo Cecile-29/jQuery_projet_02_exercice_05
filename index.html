@@ -37,34 +37,51 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js">
   </script>
   <script>
-    $(document).ready(function() {
-      //La méthode focusin()  ou focus() permet de gérer au focus le sélecteur dont l'ID est #prenom
-      $('#prenom').focus(function() {
-        // on applique ici la méthode .css() pour ajouter une bordure quant on a le focus
-        $('#prenom').css({
-          'border': '2px green dashed'
+    // $(document).ready(function() {
+    //   //La méthode focusin()  ou focus() permet de gérer au focus le sélecteur dont l'ID est #prenom
+    //   $('#prenom').focus(function() {
+    //     // on applique ici la méthode .css() pour ajouter une bordure quant on a le focus
+    //     $('#prenom').css({
+    //       'border': '2px green dashed'
+    //     });
+    //   });
+    //   //La méthode focusout() permet de gérer à la perte de focus le sélecteur dont l'ID est #prenom
+    //   $('#prenom').focusout(function() {
+    //     // on applique ici la méthode .css() pour ajouter une bordure quant on a le focus
+    //     $('#prenom').css({
+    //       'border': '2px red dashed'
+    //     });
+    //   });
+    //   //La méthode focusin() permet de gérer au focus le sélecteur dont l'ID est #nom
+    //   $('#nom').focus(function() {
+    //     // on applique ici la méthode .css() pour ajouter une bordure quant on a le focus
+    //     $('#nom').css({
+    //       'border': '2px green dashed'
+    //     });
+    //   });
+    //   //La méthode focusout() permet de gérer à la perte de focus le sélecteur dont l'ID est #prenom
+    //   $('#nom').focusout(function() {
+    //     // on applique ici la méthode .css() pour ajouter une bordure quant on a le focus
+    //     $('#nom').css({
+    //       'border': '2px red dashed'
+    //     });
+    //   });
+    // });
+
+  // CORRECTION Héléna
+  // ******************************************
+    $(document).ready(function(){
+      $('input').focusin(function(){
+            var objet1 = {
+              border : '5px green dashed',
+            };
+        $(this).css(objet1);
         });
-      });
-      //La méthode focusout() permet de gérer à la perte de focus le sélecteur dont l'ID est #prenom
-      $('#prenom').focusout(function() {
-        // on applique ici la méthode .css() pour ajouter une bordure quant on a le focus
-        $('#prenom').css({
-          'border': '2px red dashed'
-        });
-      });
-      //La méthode focusin() permet de gérer au focus le sélecteur dont l'ID est #nom
-      $('#nom').focus(function() {
-        // on applique ici la méthode .css() pour ajouter une bordure quant on a le focus
-        $('#nom').css({
-          'border': '2px green dashed'
-        });
-      });
-      //La méthode focusout() permet de gérer à la perte de focus le sélecteur dont l'ID est #prenom
-      $('#nom').focusout(function() {
-        // on applique ici la méthode .css() pour ajouter une bordure quant on a le focus
-        $('#nom').css({
-          'border': '2px red dashed'
-        });
+      $('input').focusout(function(){
+        var objet = {
+          border : '5px red dashed',
+        };
+        $(this).css(objet);
       });
     });
   </script>
